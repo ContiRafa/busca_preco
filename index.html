@@ -13,13 +13,18 @@
         <header>
             <div class="logo">
                 <a href="index.html"><img src="setup2-removebg-preview.png" alt="" width="200px"></a>
-            </div>
-            <nav> 
                 <div class="order-list">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
                     <h6 class="menu01" >Menu</h6>
-
+    
                 </div>
+            </div>
+            <nav> 
+
+                <section class="search-container">
+                    <input type="text" id="search-bar" placeholder="Digite o nome da peça...">
+                    <button id="search-btn">🔍 Buscar</button>
+                </section>
 
             </nav>
             <div class="vision">
@@ -34,10 +39,6 @@
                 <p>Comparamos preços e avaliações para você tomar a melhor decisão!</p>
             </section>
 
-            <section class="search-container">
-                <input type="text" id="search-bar" placeholder="Digite o nome da peça...">
-                <button id="search-btn">🔍 Buscar</button>
-            </section>
 
             <div id="loading" class="hidden">🔄 Buscando...</div>
             <div id="results" class="results-container"></div>
