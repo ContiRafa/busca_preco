@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Inteligente</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="/img/setup2-removebg-preview.png" alt="" width="200px"></a>
+            </div>
+            <nav> 
+                <div class="order-list">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                    <h6 class="menu01" >Menu</h6>
+
+                </div>
+
+            </nav>
+            <div class="vision">
+                <h5 class="mode"></h5>
+                <button id="theme-toggle" class="day-night">🌙</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h1>Encontre as melhores peças para seu setup gamer</h1>
+                <p>Comparamos preços e avaliações para você tomar a melhor decisão!</p>
+            </section>
+
+            <section class="search-container">
+                <input type="text" id="search-bar" placeholder="Digite o nome da peça...">
+                <button id="search-btn">🔍 Buscar</button>
+            </section>
+
+            <div id="loading" class="hidden">🔄 Buscando...</div>
+            <div id="results" class="results-container"></div>
+
+            <section class="highlights">
+                <h2 class="prod-title">Produtos mais desejados</h2>
+                <div class="highlight-cards">
+                    <div class="card">
+                        <img src="/img/rtx.jpg" alt="Placa de vídeo">
+                        <h3>Placa de Vídeo RTX 3060</h3>
+                        <p>A partir de <strong>R$ 2.500,00</strong></p>
+                        <div class="button-send">
+                            <a href="https://www.casasbahia.com.br/placa-de-video-msi-geforce-rtx-3060-ventus-oc-2x-12gb-gddr6-192-bits-1569250102/p/1569250102?utm_medium=Cpc&utm_source=GP_PLA&IdSku=1569250102&idLojista=112169&tipoLojista=3P&gclsrc=aw.ds&&utm_campaign=3p_gg_pmax_aces_b&gad_source=1&gclid=Cj0KCQiAgdC6BhCgARIsAPWNWH2x9TJnvm4cWyW4H5a66mpAfh4WnAiwtKzc-XDo63AAPs4mQXmBmqcaAqOoEALw_wcB" target="_blank"><button id="buscar01">Buscar</button></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/img/ryzen5.jpg" alt="Processador">
+                        <h3>Processador Ryzen 5</h3>
+                        <p>A partir de <strong>R$ 1.200,00</strong></p>
+                        <div class="button-send">
+                            <a href="https://www.casasbahia.com.br/processador-amd-ryzen-5-5600-35ghz-cache-32mb-am4-100-100000927box/p/1569868601?utm_source=GP_PLA&utm_medium=Cpc&utm_campaign=3p_gg_pmax_aces_b" target="_blank"><button id="buscar01" >Buscar</button></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/img/asus.jpg" alt="Placa mãe">
+                        <h3>Placa Mãe ASUS Prime</h3>
+                        <p>A partir de <strong>R$ 450,00</strong></p>
+                        <div class="button-send">
+                            <a href="https://www.casasbahia.com.br/placa-mae-asus-a520-e-prime-amd-socket-am4-ddr4-matx/p/1509437015?utm_source=GP_PLA&utm_medium=Cpc&utm_campaign=3p_gg_pmax_aces_b" target="_blank"><button id="buscar01">Buscar</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Setup Gamer Inteligente | Todos os direitos reservados</p>
+            <p>Desenvolvido por GUIH_GPT | CONTIERI_GPT</p>
+        </div>
+        <div class="footer-links">
+            <a href="/sobre.html">Sobre Nós</a> |
+            <a href="#">Política de Privacidade</a> |
+            <a href="#">Termos de Uso</a>
+        </div>
+    </footer>
+
+    <script src="/scripts.js"></script>
+    
+</body>
+</html>
