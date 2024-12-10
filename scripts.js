@@ -61,14 +61,6 @@ function atualizarTema() {
   document.querySelector(".mode").style.color = darkMode ? "#222" : "#ddd";
   document.querySelector(".mode").style.color = darkMode ? "#fff" : "#222";
 
-  /*COR DO MENU */
-  document.querySelector(".menu01").style.color = darkMode ? "#222" : "#ddd";
-  document.querySelector(".menu01").style.color = darkMode ? "#fff" : "#222";
-
-  /*COR DA BARRA */
-  document.querySelector("svg").style.color = darkMode ? "#222" : "#ddd";
-  document.querySelector("svg").style.color = darkMode ? "#fff" : "#222";
-
   /*COR "PRODUTOS DESEJADOS" */
   document.querySelector(".prod-title").style.color = darkMode
     ? "#222"
@@ -147,8 +139,19 @@ searchBtn.addEventListener("click", () => {
 
 /*-----------------------*/
 
-$(document).ready(function () {
-  $("#dropDown").click(function () {
-    $(".drop-down").toggleClass("drop-down--active");
-  });
+
+// Obtendo o checkbox e o elemento do slide
+const checkBox = document.getElementById('check01');
+const slide = document.querySelector('.slide');
+
+// Evento para verificar quando o checkbox é marcado/desmarcado
+checkBox.addEventListener('change', function() {
+    if (this.checked) {
+        // Quando o checkbox está marcado, move o slide para dentro da tela
+        slide.style.transform = 'translateX(0)';
+    } else {
+        // Quando o checkbox não está marcado, move o slide para fora da tela
+        slide.style.transform = 'translateX(-112%)';
+    }
 });
+

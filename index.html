@@ -7,18 +7,40 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <!--FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--CDN CLOUDFLARE PARA ICONES-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="page-container">
         <header>
-            <div class="logo">
-                <a href="index.html"><img src="setup2-removebg-preview.png" alt="" width="200px"></a>
-                <div class="order-list">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-                    <h6 class="menu01" >Menu</h6>
-    
+            <label>
+                <input type="checkbox" id="check01">
+                <div class="toggle">
+                    <div class="group">
+                        <span class="top_line common"></span>
+                        <span class="middle_line common"></span>
+                        <span class="bottom_line common"></span>
+                    </div>
                 </div>
-            </div>
+                <div class="logo">
+                    <a href="index.html"><img src="setup2-removebg-preview.png" alt="" width="200px"></a>
+                    <div class="slide">
+                        <h1 class="menu-bar">MENU</h1>
+                        <ul class="ul-gap">
+                            <li><a href="index.html" class="a-class"><i class="fa-solid fa-star"></i>INÍCIO</a></li>
+                            <li><a href="conta.html" class="a-class"><i class="fa-solid fa-user"></i>CONTA</a></li>
+                            <li><a href="sobre.html" class="a-class"><i class="fa-solid fa-book"></i>SOBRE</a></li>
+                            <li><a href="contato.html" class="a-class"><i class="fa-solid fa-phone"></i>CONTATO</a></li>
+                            <li><a href="categoria.html" class="a-class"><i class="fa-solid fa-laptop"></i>MONTE SEU PC</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </label>
             <nav> 
 
                 <section class="search-container">
@@ -35,7 +57,7 @@
 
         <main>
             <section class="intro">
-                <h1>Encontre as melhores peças para seu setup gamer</h1>
+                <h1 class="header-title">Encontre as melhores peças para seu setup gamer</h1>
                 <p>Comparamos preços e avaliações para você tomar a melhor decisão!</p>
             </section>
 
@@ -46,29 +68,29 @@
             <section class="highlights">
                 <h2 class="prod-title">Produtos mais desejados</h2>
                 <div class="highlight-cards">
-                    <div class="card">
-                        <img src="rtx.jpg" alt="Placa de vídeo">
-                        <h3>Placa de Vídeo RTX 3060</h3>
-                        <p>A partir de <strong>R$ 2.500,00</strong></p>
-                        <div class="button-send">
-                            <a href="https://www.casasbahia.com.br/placa-de-video-msi-geforce-rtx-3060-ventus-oc-2x-12gb-gddr6-192-bits-1569250102/p/1569250102?utm_medium=Cpc&utm_source=GP_PLA&IdSku=1569250102&idLojista=112169&tipoLojista=3P&gclsrc=aw.ds&&utm_campaign=3p_gg_pmax_aces_b&gad_source=1&gclid=Cj0KCQiAgdC6BhCgARIsAPWNWH2x9TJnvm4cWyW4H5a66mpAfh4WnAiwtKzc-XDo63AAPs4mQXmBmqcaAqOoEALw_wcB" target="_blank"><button id="buscar01">Buscar</button></a>
+                    <a href="https://www.kabum.com.br/produto/547108/placa-de-video-msi-rtx-3050-ventus-2x-xs-oc-nvidia-geforce-8gb-gddr6-912-v809-4266?utm_id=21416437563&gad_source=1&gclid=Cj0KCQiAx9q6BhCDARIsACwUxu4_1-BaWOeEdJAkSZHQ4UAiSoQwAYtsHicfJsjNIQbXIy85hgCG0TEaAiF9EALw_wcB" target="_blank" target="_blank" class="no-link"> <!-- Link externo -->
+                        <div class="card">
+                            <img src="rtx.jpg" alt="Processador">
+                            <h3>Nvidia Geforce RTX 3050</h3>
+                            <p>A partir de <strong>R$ 1.200,00 </strong></p>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="ryzen5.jpg" alt="Processador">
-                        <h3>Processador Ryzen 5</h3>
-                        <p>A partir de <strong>R$ 1.200,00</strong></p>
-                        <div class="button-send">
-                            <a href="https://www.casasbahia.com.br/processador-amd-ryzen-5-5600-35ghz-cache-32mb-am4-100-100000927box/p/1569868601?utm_source=GP_PLA&utm_medium=Cpc&utm_campaign=3p_gg_pmax_aces_b" target="_blank"><button id="buscar01" >Buscar</button></a>
+                    </a>
+                    <a href="https://www.casasbahia.com.br/processador-amd-ryzen-5-5600-35ghz-cache-32mb-am4-100-100000927box/p/1569868601?utm_source=GP_PLA&utm_medium=Cpc&utm_campaign=3p_gg_pmax_aces_b" target="_blank"" target="_blank" class="no-link"> <!-- Link externo -->
+                        <div class="card">
+                            <img src="ryzen5.jpg" alt="Processador">
+                            <h3>Processador Ryzen 5</h3>
+                            <p>A partir de <strong>R$ 1.200,00</strong></p>
                         </div>
-                    </div>
+                    </a>
                     <div class="card">
-                        <img src="asus.jpg" alt="Placa mãe">
-                        <h3>Placa Mãe ASUS Prime</h3>
-                        <p>A partir de <strong>R$ 450,00</strong></p>
-                        <div class="button-send">
-                            <a href="https://www.casasbahia.com.br/placa-mae-asus-a520-e-prime-amd-socket-am4-ddr4-matx/p/1509437015?utm_source=GP_PLA&utm_medium=Cpc&utm_campaign=3p_gg_pmax_aces_b" target="_blank"><button id="buscar01">Buscar</button></a>
-                        </div>
+                        <a href="https://www.kabum.com.br/produto/547108/placa-de-video-msi-rtx-3050-ventus-2x-xs-oc-nvidia-geforce-8gb-gddr6-912-v809-4266?utm_id=21416437563&gad_source=1&gclid=Cj0KCQiAx9q6BhCDARIsACwUxu4_1-BaWOeEdJAkSZHQ4UAiSoQwAYtsHicfJsjNIQbXIy85hgCG0TEaAiF9EALw_wcB" target="_blank" class="no-link"> <!-- Link externo -->
+                            
+                            
+                            <img src="asus.jpg" alt="Processador">
+                            <h3>Placa Mãe Asus Prime H610M-A D4, LGA 1700 H610, mATX, DDR4</h3>
+                            <p>A partir de <strong>R$ 650,00 </strong></p>
+
+                        </a>
                     </div>
                 </div>
             </section>
