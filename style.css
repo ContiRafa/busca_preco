@@ -462,11 +462,13 @@ a {
 }
 
 .slide {
-  height: 220%;
+  height: 800%;
   width: 20%;
   position: absolute;
   background-color: #ddd;
   transition: 0.5s ease;
+  margin-top: -20px;
+  margin-left: -50px;
 }
 
 .menu-bar {
@@ -485,13 +487,23 @@ li a {
   font-family: "Montserrat", sans-serif;
 }
 
+
+/*espaçamento entre as listas */
+
 li {
-  margin-bottom: 25px;
-  margin-left: 8px;
+  margin-bottom: 40px;
+  margin-left: 30px;
+  margin-top: 10px;
 }
 
 i {
   margin-right: 10px;
+}
+
+.container01{
+    margin-left: 300px;
+    margin-top: -40px;
+    cursor: ;
 }
 
 /* CSS DO ICONE DO MENU */
@@ -556,7 +568,90 @@ i {
 .slide {
     position: absolute; /* Necessário para usar transform */
     transform: translateX(-112%); /* Define a posição inicial fora da tela */
-    transition: transform 2s ease; /* A animação dura 5 segundos */
+    transition: transform 1s ease; /* A animação dura 5 segundos */
 }
 
 /* Quando o checkbox estiver marcado, o slide se moverá para a direita */
+
+@media (max-width: 768px) {
+    .slide {
+      width: 50%; /* Ajusta a largura para telas menores */
+    }
+  
+    .menu-bar {
+      text-align: left; /* Alinha o menu à esquerda */
+      padding: 10px;
+    }
+  
+    li {
+      font-size: 16px; /* Reduz o tamanho da fonte */
+      margin-bottom: 15px; /* Ajusta o espaçamento */
+    }
+  
+    .toggle {
+      height: 30px;
+      width: 30px;
+      top: 10px;
+    }
+  
+    .toggle .common {
+      height: 2px;
+      width: 25px;
+    }
+  
+    .toggle .top_line {
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, 200%);
+      width: 25px;
+    }
+  
+    .toggle .middle_line {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 370%);
+      margin-top: -3px;
+      width: 25px;
+    }
+  
+    .group {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-start; /* Ajusta alinhamento */
+    }
+
+   
+  }
+
+
+  @media (max-width: 480px) {
+    .slide {
+      width: 70%; /* Ainda mais estreito para telas menores */
+      height: 400%;
+      margin-top: -50px;
+      margin-left: -9px;
+    }
+  
+    li {
+      font-size: 14px; /* Tamanho de fonte reduzido */
+      margin-bottom: 10px;
+    }
+  
+    .toggle {
+      height: 25px;
+      width: 25px;
+    }
+  
+    .toggle .common {
+      height: 2px;
+      width: 20px;
+    }
+  
+    .toggle .top_line {
+      width: 20px;
+    }
+  
+    .toggle .middle_line {
+      width: 20px;
+    }
+  }

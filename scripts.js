@@ -138,20 +138,64 @@ searchBtn.addEventListener("click", () => {
 });
 
 /*-----------------------*/
+/*variaveis */
 
+const checkBox1 = document.getElementById("check01");
+const slide1 = document.querySelector(".slide");
+const toggle01 = document.querySelector(".toggle");
 
-// Obtendo o checkbox e o elemento do slide
-const checkBox = document.getElementById('check01');
-const slide = document.querySelector('.slide');
+// Controle para o primeiro checkbox
+// Evento para o primeiro checkbox
+checkBox1.addEventListener("change", function () {
+  if (this.checked) {
+    slide1.style.transform = "translateX(0)";
+  } else {
+    slide1.style.transform = "translateX(-112%)";
+  }
+});
 
-// Evento para verificar quando o checkbox é marcado/desmarcado
-checkBox.addEventListener('change', function() {
-    if (this.checked) {
-        // Quando o checkbox está marcado, move o slide para dentro da tela
-        slide.style.transform = 'translateX(0)';
-    } else {
-        // Quando o checkbox não está marcado, move o slide para fora da tela
-        slide.style.transform = 'translateX(-112%)';
-    }
+checkBox1.addEventListener("change", function () {
+  if (this.checked) {
+    toggle01.style.display = "none"; // Esconde o slide
+    checkBox1.style.display = "none"; // esconde o input
+  } else {
+    toggle01.style.display = "block"; // Esconde o slide
+  }
+});
+
+slide1.addEventListener('click', function(event) {
+  event.preventDefault(); // Bloqueia o comportamento padrão
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const closeButton = document.getElementById('control-Close');
+  const closeDiv = document.getElementById('slide001');
+  const toggleDiv = document.querySelector('.toggle'); // Seleciona a div .toggle
+
+  function fecharDiv() {
+      if (closeDiv) {
+          // Fecha a div
+          closeDiv.style.transform = "translateX(-112%)";
+          console.log("Div fechada!");
+
+          // Condição para fixar a posição da .toggle
+          if (closeDiv = true) {
+              toggleDiv.style.position = "absolute"; // Define posição original
+              toggleDiv.style.top = "20px"; // Ajusta a posição no topo (exemplo)
+              toggleDiv.style.left = "20px"; // Ajusta a posição na lateral (exemplo)
+              console.log("Toggle fixada na posição original!");
+          } else {
+              console.error("Elemento .toggle não encontrado!");
+          }
+      } else {
+          console.error("Elemento closeDiv não encontrado!");
+      }
+  }
+
+  if (closeButton) {
+      closeButton.addEventListener('click', fecharDiv);
+  } else {
+      console.error("Botão de fechar não encontrado!");
+  }
 });
 
