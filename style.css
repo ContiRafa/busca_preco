@@ -503,8 +503,8 @@ i {
 .container01{
     margin-left: 300px;
     margin-top: -40px;
-    cursor: ;
 }
+
 
 /* CSS DO ICONE DO MENU */
 
@@ -524,6 +524,14 @@ i {
   border-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.input02{
+  display: none;
+}
+
+.container01{
+  cursor: pointer;
 }
 
 /* CSS DAS TRES BARRAS */

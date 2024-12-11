@@ -140,62 +140,48 @@ searchBtn.addEventListener("click", () => {
 /*-----------------------*/
 /*variaveis */
 
-const checkBox1 = document.getElementById("check01");
-const slide1 = document.querySelector(".slide");
-const toggle01 = document.querySelector(".toggle");
-
-// Controle para o primeiro checkbox
-// Evento para o primeiro checkbox
-checkBox1.addEventListener("change", function () {
-  if (this.checked) {
-    slide1.style.transform = "translateX(0)";
-  } else {
-    slide1.style.transform = "translateX(-112%)";
-  }
-});
-
-checkBox1.addEventListener("change", function () {
-  if (this.checked) {
-    toggle01.style.display = "none"; // Esconde o slide
-    checkBox1.style.display = "none"; // esconde o input
-  } else {
-    toggle01.style.display = "block"; // Esconde o slide
-  }
-});
-
-slide1.addEventListener('click', function(event) {
-  event.preventDefault(); // Bloqueia o comportamento padrão
-});
-
 document.addEventListener("DOMContentLoaded", function () {
-  const closeButton = document.getElementById('control-Close');
-  const closeDiv = document.getElementById('slide001');
-  const toggleDiv = document.querySelector('.toggle'); // Seleciona a div .toggle
+  const button01 = document.getElementById("check01"); // Botão para abrir o slide
+  const slide1 = document.querySelector(".slide"); // Div do slide
+  const toggle01 = document.querySelector(".toggle"); // Elemento .toggle
+  const closeButton = document.getElementById("control-Close"); // Botão verde para fechar o slide
 
+  let isSlideOpen = false; // Controle do estado do slide
+
+  // Evento para abrir o slide
+  button01.addEventListener("click", function () {
+    if (!isSlideOpen) {
+      slide1.style.transform = "translateX(0)"; // Mostra o slide
+      toggle01.style.display = "none"; // Esconde o .toggle
+      button01.style.display = "none"; // Esconde o botão
+      isSlideOpen = true; // Atualiza o estado do slide
+      console.log("Slide aberto!");
+    }
+  });
+
+  // Função para fechar o slide
   function fecharDiv() {
-      if (closeDiv) {
-          // Fecha a div
-          closeDiv.style.transform = "translateX(-112%)";
-          console.log("Div fechada!");
+    if (isSlideOpen) {
+      slide1.style.transform = "translateX(-112%)"; // Fecha o slide
+      console.log("Slide fechado!");
 
-          // Condição para fixar a posição da .toggle
-          if (closeDiv = true) {
-              toggleDiv.style.position = "absolute"; // Define posição original
-              toggleDiv.style.top = "20px"; // Ajusta a posição no topo (exemplo)
-              toggleDiv.style.left = "20px"; // Ajusta a posição na lateral (exemplo)
-              console.log("Toggle fixada na posição original!");
-          } else {
-              console.error("Elemento .toggle não encontrado!");
-          }
-      } else {
-          console.error("Elemento closeDiv não encontrado!");
-      }
+      // Volta a exibir a .toggle e o botão inicial
+      toggle01.style.position = "absolute";
+      toggle01.style.zIndex = "1";
+      toggle01.style.top = "20px";
+      toggle01.style.left = "20px";
+      toggle01.style.display = "block"; // Mostra a .toggle novamente
+      button01.style.display = "block"; // Mostra o botão novamente
+      isSlideOpen = false; // Atualiza o estado do slide
+    } else {
+      console.error("O slide já está fechado.");
+    }
   }
 
+  // Evento para o botão verde (fechar slide)
   if (closeButton) {
-      closeButton.addEventListener('click', fecharDiv);
+    closeButton.addEventListener("click", fecharDiv);
   } else {
-      console.error("Botão de fechar não encontrado!");
+    console.error("Botão de fechar não encontrado!");
   }
 });
-
