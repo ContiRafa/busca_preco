@@ -94,52 +94,62 @@ searchBtn.addEventListener("click", () => {
 
   // Mostra o indicador de carregamento
   loadingIndicator.style.display = "block";
-  resultsContainer.innerHTML = "";
 
   // Simula uma pesquisa com um atraso de 2 segundos
-  setTimeout(() => {
-    loadingIndicator.style.display = "none";
+  // Simula uma pesquisa com um atraso de 2 segundos
+setTimeout(() => {
+  loadingIndicator.style.display = "none";
 
-    // Simula resultados da pesquisa
-    const results = [
-      {
-        site: "Pichau",
-        rating: 4.9,
-        product: "Placa Mãe ASUS Prime",
-        price: "R$ 450,00",
-      },
-      {
-        site: "Kabum",
-        rating: 4.4,
-        product: "Placa Mãe ASUS Prime",
-        price: "R$ 490,00",
-      },
-      {
-        site: "Terabyte",
-        rating: 4.7,
-        product: "Placa Mãe ASUS Prime",
-        price: "R$ 470,00",
-      },
-    ];
+  // Simula resultados da pesquisa
+  const results = [
+    {
+      site: "Pichau",
+      rating: 4.9,
+      product: "Placa Mãe ASUS Prime",
+      price: "R$ 450,00",
+    },
+    {
+      site: "Kabum",
+      rating: 4.4,
+      product: "Placa Mãe ASUS Prime",
+      price: "R$ 490,00",
+    },
+    {
+      site: "Terabyte",
+      rating: 4.7,
+      product: "Placa Mãe ASUS Prime",
+      price: "R$ 470,00",
+    },
+  ];
 
-    // Mostra os resultados na tela
-    results.forEach((result) => {
-      const resultCard = document.createElement("div");
-      resultCard.className = "card";
-      resultCard.innerHTML = `
-                <h3>${result.site}</h3>
-                <p><strong>Produto:</strong> ${result.product}</p>
-                <p><strong>Avaliação:</strong> ${result.rating} ⭐</p>
-                <p><strong>Preço:</strong> ${result.price}</p>
-            `;
-      resultsContainer.appendChild(resultCard);
-    });
-  }, 2000);
-});
+  const resultsContainer = document.getElementById("results-container");
+  if (!resultsContainer) {
+    console.error("Elemento 'results-container' não encontrado!");
+    return;
+  }
 
-/*-----------------------*/
-/*variaveis */
+  results.forEach((result) => {
+    // Cria um elemento HTML padrão para o cartão
+    const resultCard = document.createElement("div");
 
+    // Adiciona a classe CSS ao cartão
+    resultCard.className = "results-container";
+
+    // Define o conteúdo do cartão usando os dados do resultado
+    resultCard.innerHTML = `
+        <h3>${result.site}</h3>
+        <p><strong>Produto:</strong> ${result.product}</p>
+        <p><strong>Avaliação:</strong> ${result.rating} ⭐</p>
+        <p><strong>Preço:</strong> ${result.price}</p>
+    `;
+
+    // Adiciona o cartão criado ao contêiner de resultados
+    resultsContainer.appendChild(resultCard);
+  });
+}, 2000);
+
+/* ----------------------- */
+/* Variáveis */
 document.addEventListener("DOMContentLoaded", function () {
   const button01 = document.getElementById("check01"); // Botão para abrir o slide
   const slide1 = document.querySelector(".slide"); // Div do slide
@@ -147,6 +157,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.getElementById("control-Close"); // Botão verde para fechar o slide
 
   let isSlideOpen = false; // Controle do estado do slide
+
+  // Verifica se os elementos existem antes de adicionar eventos
+  if (!button01 || !slide1 || !toggle01) {
+    console.error("Algum elemento necessário não foi encontrado!");
+    return;
+  }
 
   // Evento para abrir o slide
   button01.addEventListener("click", function () {
@@ -174,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
       button01.style.display = "block"; // Mostra o botão novamente
       isSlideOpen = false; // Atualiza o estado do slide
     } else {
-      console.error("O slide já está fechado.");
+      console.warn("O slide já está fechado.");
     }
   }
 
@@ -184,4 +200,4 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Botão de fechar não encontrado!");
   }
-});
+})});

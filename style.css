@@ -308,8 +308,9 @@ footer .footer-content {
   margin-top: 15px;
 }
 
+/*resultados da barra de pesquisa*/
 .results-container {
-  display: none;
+  
 }
 
 .order-list {
