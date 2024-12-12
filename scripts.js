@@ -86,12 +86,26 @@ themeToggle.addEventListener("click", () => {
 
 // Função de pesquisa
 searchBtn.addEventListener("click", () => {
-  const query = searchBar.value.trim();
+  const query = searchBar.value.trim(); // Obtém o valor do campo de busca e remove espaços extras
+
   if (query === "") {
-    alert("Por favor, insira um termo de pesquisa.");
+    alert("Por favor, insira um termo de pesquisa."); // Valida se o campo está vazio
     return;
   }
-
+  
+  // Lista de valores aceitos
+  const validTerms = ["Pichau", "Kabum", "Terabyte", "Placa Mãe ASUS Prime"];
+  
+  /*validação para pesquisa*/
+  if (!validTerms.includes(query)) {
+    console.log("não"); // Não encontrou o termo na lista
+    event.preventDefault();
+    alert("Dados não encontrados");
+    return;
+  } else {
+    console.log("sim"); // O termo está na lista
+  }
+  
   // Mostra o indicador de carregamento
   loadingIndicator.style.display = "block";
 
@@ -129,6 +143,7 @@ setTimeout(() => {
   }
 
   results.forEach((result) => {
+    
     // Cria um elemento HTML padrão para o cartão
     const resultCard = document.createElement("div");
 
