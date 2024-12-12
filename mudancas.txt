@@ -1,6 +1,7 @@
 usuario: rafael;
 
 //barra de pesquisa ta pegando, mexi no codigo do js...
+// display pra celular, ta dando 20 erros... tem q ver o que é,,,
 
 atualização:
 12/12, 13:58
