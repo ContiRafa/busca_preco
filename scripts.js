@@ -95,16 +95,17 @@ searchBtn.addEventListener("click", () => {
   
   // Lista de valores aceitos
   const validTerms = ["Pichau", "Kabum", "Terabyte", "Placa Mãe ASUS Prime"];
-  
-  /*validação para pesquisa*/
-  if (!validTerms.includes(query)) {
-    console.log("não"); // Não encontrou o termo na lista
-    event.preventDefault();
-    alert("Dados não encontrados");
-    return;
-  } else {
-    console.log("sim"); // O termo está na lista
-  }
+
+/* Validação para pesquisa */
+if (!validTerms.some(term => term.toLowerCase() === query.toLowerCase())) {
+  console.log("não"); // Não encontrou o termo na lista
+  event.preventDefault(); 
+  alert("Dados não encontrados");
+  return;
+} else {
+  console.log("sim"); // O termo está na lista
+}
+
   
   // Mostra o indicador de carregamento
   loadingIndicator.style.display = "block";
